@@ -7,12 +7,12 @@
 	<div class="row">
 		<% @category.documents.each do |document| %>
 		 
-		  <div class="col-md-9" style="margin: 10px 0;">
-			<%= link_to document.document.url.split('/')[-1].gsub(/ *\?+\d+$/, ''), document.document.url, target: "_blank" %>
+		  <div class="col-md-9" style="padding: 10px 0; border-top: 1px solid black;">
+			<%= link_to document.document.url.split('/')[-1].gsub(/ *\?+\d+$/, ''), document.document.url, target: "_blank", style: "text-decoration: none; font-size: 16px;" %>
 		  </div>
-		  <div class="col-md-3" style="margin: 7px 0;">
+		  <div class="col-md-3" style="padding: 10px 0; border-top: 1px solid black;">
 		    <div class="pull-right">
-		  		<%= link_to "Delete", delete_document_category_path(document_id: document.id), remote: true, method: :delete, class: "btn btn-danger" %>
+		  		<%= link_to "Delete", delete_document_category_path(document_id: document.id), remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger" %>
 		  	</div>
 		  </div>
 

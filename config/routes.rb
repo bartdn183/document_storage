@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :documents, only: [:destroy]
 
-  resources :categories do
+  resources :categories, except: [:index] do
   	member do
   	  delete :delete_document
   	end
