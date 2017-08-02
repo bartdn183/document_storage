@@ -1,0 +1,20 @@
+
+	<li style="list-style: none; border-top: 1px solid gray;">
+		<div class="row" style="margin-bottom: 10px;">
+			<div class="col-md-8">
+				<div style="padding-top: 15px;">
+				<%= link_to category.name, category_path(category), remote: true %>
+				</div>
+			</div>
+			<div class="col-md-4">
+			  <div style="padding-top: 10px;">
+				<%= link_to "Edit",edit_category_path(category), remote: true, class: "btn btn-warning", style: "display: inline-block;" %>
+				<%= link_to "Delete", category, remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger" %>
+			  </div>
+			</div>
+		</div>
+
+	</li>
+
+
+
