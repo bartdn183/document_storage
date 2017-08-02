@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
-  before_action :all_categories, only: [:index, :create, :update, :destroy]
+  before_action :all_categories, only: [:index, :create, :update, :destroy, :delete_document]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: [:delete_document]
 
   # GET /categories
   # GET /categories.json
@@ -10,6 +11,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+  end
+
+  def delete_document
+    @category = Category.find(@document.category_id)
+    @document.destroy
   end
 
   # GET /categories/new
@@ -51,6 +57,10 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+    def set_document
+      @document = Document.find(params[:document_id])
+    end
 
     def all_categories
       @categories = Category.order(name: :asc)

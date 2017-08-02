@@ -5,9 +5,14 @@ Rails.application.routes.draw do
 
   resources :documents, only: [:destroy]
 
-  resources :categories
+  resources :categories do
+  	member do
+  	  delete :delete_document
+  	end
+  end
+
   devise_for :users
-  root 'home#index'
+  root 'categories#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

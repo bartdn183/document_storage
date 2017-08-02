@@ -2,9 +2,20 @@
 	<% unless @category.documents.empty? %>
 	<h3>All <%= @category.name %> Documents</h3>
 	<% else %>
-	<h3>No Documents for <% @category.name %></h3>
+	<h3>No <%= @category.name %> Documents</h3>
 	<% end %>
-	<% @category.documents.each do |document| %>
-		<%= link_to document.document.url.gsub(/[^A-Za-z0-9]+/, ' '), document.document.url, target: "_blank" %>
-	<% end %>
+	<div class="row">
+		<% @category.documents.each do |document| %>
+		 
+		  <div class="col-md-9" style="margin: 10px 0;">
+			<%= link_to document.document.url.split('/')[-1].gsub(/ *\?+\d+$/, ''), document.document.url, target: "_blank" %>
+		  </div>
+		  <div class="col-md-3" style="margin: 7px 0;">
+		    <div class="pull-right">
+		  		<%= link_to "Delete", delete_document_category_path(document_id: document.id), remote: true, method: :delete, class: "btn btn-danger" %>
+		  	</div>
+		  </div>
+
+		<% end %>
+	</div>
 <% end %>
