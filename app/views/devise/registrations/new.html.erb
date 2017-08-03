@@ -34,7 +34,7 @@
               <%= f.text_field :organization, class: "form-control input-lg", "aria-describedby" => "organization", placeholder: "organization..." %>
             </div>
             <br>
-            <%= f.hidden_field :user_type, value: "guest" %>
+            <%= f.hidden_field :user_type, value: "pending" %>
             <div class="input-group">
               <span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
               <%= f.email_field :email, class: "form-control input-lg", "aria-describedby" => "email", placeholder: " johndoe@email.com..." %>

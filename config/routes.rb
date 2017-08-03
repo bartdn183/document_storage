@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/users_access'
+  get 'users' => 'users#users_access'
 
   get 'users/category_access'
 
@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+  resources :users, only: [:destroy] do
+    member do
+      post :activate
+      post :category_access
+    end
+  end
   root 'categories#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
