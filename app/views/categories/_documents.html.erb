@@ -1,10 +1,9 @@
 <% unless @category.nil? %>
   <div class="well">
-	<% unless @category.documents.empty? %>
-	<h3 style="margin: 0 0 20px 0;">All <%= @category.name %> Documents</h3>
+	<% if @category.documents.empty? %>
+		<h3 class="no-margin">No <%= @category.name %> Documents</h3>
 	<% else %>
-	<h3 class="no-margin">No <%= @category.name %> Documents</h3>
-	<% end %>
+	    <h3 style="margin: 0 0 20px 0;">All <%= @category.name %> Documents</h3>
 	<div class="row" style="padding: 10px;">
 		<% @category.documents.order(document_file_name: :asc).each do |document| %>
 		 
@@ -19,5 +18,6 @@
 
 		<% end %>
 	</div>
+	<% end %>
    </div>
 <% end %>
