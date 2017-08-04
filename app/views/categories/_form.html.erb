@@ -4,9 +4,6 @@
     <%= form.text_field :name, id: :category_name, placeholder: "Name Category...", class: "form-control" %>
   </div>
 
-
-  <%= form.select :category_ids, Category.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
-
   <div class="form-group">
       <strong>Upload Documents</strong>
       <%= file_field_tag "documents[]", type: :file, multiple: true %>
