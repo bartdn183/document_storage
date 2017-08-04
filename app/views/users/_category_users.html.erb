@@ -1,22 +1,20 @@
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h2 class="panel-title">Document Categories</h2>
-    </div>
-    <div class="panel-body">
-        <% @categories.each do |category| %>
-    		  <div class="well">
-            <h3 style="margin: 0 0 10px 0;"><%= category.name %></h3>	
-            <% category.users.each do |user| %>
-              <div class="row">
-                <div class="col-md-9">
-    					     <%= user.email %> (<%= user.first_name %> <%= user.last_name %>)
-                </div>
-                <div class="col-md-3">
-                  <%= link_to "Delete", delete_user_cat_user_path(user, cat_id: category.id), remote: true, method: :delete, class: "btn btn-danger" %>
-                </div>
+
+  <% @categories.each do |category| %>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= category.name.upcase %></h3>	
+        </div>
+        <div class="panel-body">
+          <% category.users.each do |user| %>
+            <div class="row" style="border-bottom: 1px solid black; padding: 10px;">
+              <div class="col-md-9">
+    				     <%= user.email %> (<%= user.first_name %> <%= user.last_name %>)
               </div>
-    				<% end %>
-          </div>
-        <% end %>
+              <div class="col-md-3">
+                <%= link_to "Delete", delete_user_cat_user_path(user, cat_id: category.id), remote: true, method: :delete, class: "btn btn-danger" %>
+              </div>
+            </div>
+    			<% end %>
+        </div>
     </div>
-  </div>
+  <% end %>

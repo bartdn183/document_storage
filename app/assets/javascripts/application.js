@@ -43,7 +43,14 @@ $(document).on('turbolinks:load', function() {
 
 	});
 
-	 $(".dropdown-selector").select2({
+	 $(".dropdown-selector-single").select2({
+	 		theme: "bootstrap",
+	 		width: "100%"
+	 });
+
+	 $(".dropdown-selector-multiple").select2({
+	 		placeholder: "Select Document Category",
+	 		width: "auto !important",
 	 		theme: "bootstrap"
 	 });
 });

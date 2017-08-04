@@ -2,4 +2,10 @@
 $('#pending_users').html("<%= j (render 'pending_user') %>");
 $('#active_users').html("<%= j (render @users) %>");
 $('#category_users').html("<%= j (render 'category_users') %>");
-$('#category_form').trigger("reset");
+
+
+// $('#category_input').html('').select2({data: {id:null, text: null}});
+
+$('#user_input').val('').trigger('change');
+$('#category_input').val('').trigger('change');
+
