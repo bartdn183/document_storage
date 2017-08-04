@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :pending_users, only: [:users_access, :destroy, :activate, :category_access, :delete_user_cat]
   before_action :set_user, only: [:destroy, :activate, :delete_user_cat]
   before_action :set_categories, only: [:users_access, :category_access, :delete_user_cat, :activate, :destroy]
+  before_action :user_access
+
+  include ApplicationHelper
 
   def delete_user_cat
     @cat_user = CategoryUser.find_by(category_id: params[:cat_id], user_id: @user.id)

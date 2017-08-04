@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :all_categories, only: [:index, :create, :update, :destroy, :delete_document]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :set_document, only: [:delete_document]
-
+  
   # GET /categories
   # GET /categories.json
   def index
