@@ -13,9 +13,11 @@
  *= require material_icons
  */
 
- @import "material";
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "bootstrap-table";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
  @import "select2";
  @import "select2-bootstrap";

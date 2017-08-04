@@ -14,8 +14,8 @@
 //= require jquery
 //= require select2
 //= require bootstrap-sprockets
+//= require bootstrap-table
 //= require turbolinks
-//= require material
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {

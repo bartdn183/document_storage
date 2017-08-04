@@ -6,12 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jquery-rails'
-gem 'material_design_lite-rails'
-gem 'material_icons'
 gem 'hirb'
 gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass'
+gem 'bootstrap-table-rails'
+gem 'better_errors'
+gem 'font-awesome-sass'
 gem 'select2-rails'
 gem 'aws-sdk-v1'
 gem 'aws-sdk', '~> 2.0'
