@@ -1,17 +1,24 @@
 
-
-	  <div class="row" style="padding: 10px 0 10px 10px;">
-		<div class="col-md-4">
-			<%= user.first_name %>
-			<%= user.last_name %>
-		</div>
-		<div class="col-md-3">
-		<%= user.email %>
-		</div>
-		<div class="col-md-2">
-		<%= user.user_type %>
-		</div>
-		<div class="col-md-2">
-				<%= link_to user, remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger btn-sm" do %> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete <% end %>
-		</div>
+	  <div class="row" style="border-top: 1px solid black;">
+			<div class="col-md-3">
+			  <div style="padding-top: 15px;">
+				<%= user.first_name %>
+				<%= user.last_name %>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div style="padding-top: 15px;">
+				<%= user.email %>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div style="padding-top: 15px;">
+				<%= user.user_type %>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div style="padding-top: 10px;">
+			      <%= link_to user, remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger btn-sm" do %> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete <% end %>
+			  </div>
+			</div>
 	  </div>

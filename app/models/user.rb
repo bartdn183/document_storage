@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  serialize :category, Array
+  has_many :category_users, dependent: :destroy
+  has_many :categories, through: :category_users
+
   
 end

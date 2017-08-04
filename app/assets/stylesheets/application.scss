@@ -17,6 +17,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+ @import "select2";
+ @import "select2-bootstrap";
 
 .navbar-inverse .navbar-brand {
 	color: white;
@@ -49,9 +51,11 @@
 	text-decoration: none !important;
 }
 
-#users_panel, #users_categories_panel {
+#users_categories_panel {
 	display:none;
 }
+
+
 
 
 

@@ -9,7 +9,7 @@
 			<div class="well">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h2 class="panel-title">All Pending Users</h2>
+						<h2 class="panel-title" style="text-align: center;">ALL PENDING USERS</h2>
 					</div>
 					<div id="pending_users">
 					 	<%= render 'pending_user' %>
@@ -18,30 +18,34 @@
 			</div>
 		</div>
 		<div class="col-md-7">
-		  <div class="well" style="background: white; border-radius: 3px; padding: 10px;">
-		  	<div class="panel panel-default">
-		  		<div class="panel-heading">
-		  			<h3 style="margin:0; text-align: center;">All Users</h3>
-		  		</div>
-			  	<div id="active_users">
-					<%= render @users %>
-			 	</div>
-		  	</div>
-		  </div>
+			<div class="well" style="padding: 20px !important;">
+	  	  		<h3 class="panel-title" style="text-align: center;">ALL ACTIVE USERS</h3>
+				  	<div id="active_users">
+						<%= render @users %>
+				 	</div>
+			</div>
 		</div>
 	</div>
   </div>
   <div id="users_categories_panel">
   		<div class="row">
-  			<div class="col-md-5">
-  				<div class="panel panel-default">
+  			<div class="col-md-4">
+  				
+  				<div class="panel panel-primary">
   					<div class="panel-heading">
-  					 	<h2 class="panel-title">Add User To Document Categories</h2>
+  					 	<h2 class="panel-title">ADD DOCUMENT CATEGORIES</h2>
   					</div>
   					<div class="panel-body">
-
+  					  <div id="category_form">
+  					  		<%= render 'category_form' %>
+					  </div>
   					</div>
   				</div>
+  			</div>
+  			<div class="col-md-4">
+  			  <div id="category_users">
+  				<%= render 'category_users' %>
+  			  </div>
   			</div>
   		</div>
   </div>

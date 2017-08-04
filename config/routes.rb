@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   resources :users, only: [:destroy] do
     member do
       post :activate
+      delete :delete_user_cat
+    end
+
+    collection do
       post :category_access
     end
   end

@@ -12,6 +12,7 @@ gem 'hirb'
 gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass'
+gem 'select2-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'

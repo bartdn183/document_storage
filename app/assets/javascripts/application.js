@@ -12,10 +12,12 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require select2
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require material
 //= require_tree .
+
 $(document).on('turbolinks:load', function() {
 	$("#users").click(function(){
 		if(($("#users_panel").css('display') == "none") && ($("#users_categories_panel").css('display') == "none")) {
@@ -40,4 +42,8 @@ $(document).on('turbolinks:load', function() {
 		  };
 
 	});
+
+	 $(".dropdown-selector").select2({
+	 		theme: "bootstrap"
+	 });
 });
