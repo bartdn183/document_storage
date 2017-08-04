@@ -11,7 +11,7 @@
     				     <%= user.email %> (<%= user.first_name %> <%= user.last_name %>)
               </div>
               <div class="col-md-3">
-                <%= link_to "Delete", delete_user_cat_user_path(user, cat_id: category.id), remote: true, method: :delete, class: "btn btn-danger" %>
+                <%= link_to delete_user_cat_user_path(user, cat_id: category.id), remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger btn-sm" do %> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete <% end %>
               </div>
             </div>
     			<% end %>

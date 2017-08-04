@@ -6,5 +6,5 @@
 		<%= form.collection_select(:categories, @categories, :id, :name, { :prompt => "Select Categories"},
 	       { :multiple => true, class: "form-control dropdown-selector-multiple", id: "category_input" } ) %>
 		</div>
-	<%= form.submit "SET CATEGORIES", class: "btn btn-primary btn-block", id: "btn_form" %>
+	<%= form.submit "SET CATEGORIES", class: "btn btn-primary btn-block btn-large", id: "btn_form" %>
 <% end %>
