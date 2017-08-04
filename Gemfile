@@ -13,8 +13,6 @@ gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'select2-rails'
-gem 'aws-sdk-v1'
-gem 'aws-sdk', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
