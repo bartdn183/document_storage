@@ -15,7 +15,27 @@
 			</div>
 		</div>
 	</li>
+<% else %>
+	<% current_user.categories.each do |category| %>
+		<li style="list-style: none; border-top: 1px solid gray;">
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="col-md-7">
+					<div style="padding-top: 15px;">
+					<%= link_to category_path(category), remote: true, style: "text-decoration: none; font-size: 16px; color: darkblue;" do %>
+						<span class="glyphicon glyphicon-file" aria-hidden="true"></span> <%= category.name %> <% end %>
+					</div>
+				</div>
+				<div class="col-md-5">
+				  <div style="padding-top: 10px;">
+					<%= link_to edit_category_path(category), remote: true, class: "btn btn-warning btn-sm", style: "display: inline-block;" do %> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit <% end %> | 
+					<%= link_to category, remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger btn-sm" do %> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete <% end %>
+				  </div>
+				</div>
+			</div>
+		</li>
+	<% end %>
 <% end %>
+
 
 
 
