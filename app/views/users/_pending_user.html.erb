@@ -1,11 +1,15 @@
 <% @pending_users.each do |user| %>
-  <div class="row" style="padding: 10px 0 10px 10px;">
-  	<div class="col-md-7">
-	<%= user.email %>
+ <li class="li-style-orange">
+  <div class="row" style="margin: 10px 0;">
+  	<div class="col-md-6">
+		<%= user.email %>
 	</div>
-	<div class="col-md-5">
-		<%= link_to activate_user_path(user), remote: true, method: :post, data: { confirm: "Are You Sure?"}, class: "btn btn-success btn-sm" do %> <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Activate <% end %>
+	<div class="col-md-6">
+	  <div class="pull-right">
+		<%= link_to activate_user_path(user), remote: true, method: :post, data: { confirm: "Are You Sure?"}, class: "btn btn-success btn-sm" do %> <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> Activate <% end %> | 
 		<%= link_to user, remote: true, method: :delete, data: { confirm: "Are You Sure?"}, class: "btn btn-danger btn-sm" do %> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete <% end %>
+	  </div>
 	</div>
   </div>
+ </li>
 <% end %>

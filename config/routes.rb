@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   get 'users/category_access'
 
-  resources :documents, only: [:destroy]
-
   resources :categories, except: [:index] do
   	member do
   	  delete :delete_document
