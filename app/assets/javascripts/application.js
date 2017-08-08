@@ -44,6 +44,7 @@ $(document).on('turbolinks:load', function() {
 	});
 
 	 $(".dropdown-selector-single").select2({
+	 		placeholder: "Select User",
 	 		theme: "bootstrap",
 	 		width: "100%"
 	 });

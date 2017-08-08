@@ -1,4 +1,7 @@
 
 $('#pending_users').html("<%= j (render 'pending_user') %>");
-$('#active_users').html("<%= j (render @users) %>");
+$('#active_users').html("<%= j (render 'user') %>");
 $('#category_users').html("<%= j (render 'category_users') %>");
+
+$('#user_input').val('').trigger('change');
+$('#category_input').val('').trigger('change');

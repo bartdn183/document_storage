@@ -1,2 +1,16 @@
 $('#pending_users').html("<%= j (render 'pending_user') %>");
-$('#active_users').html("<%= j (render @users) %>");
+$('#active_users').html("<%= j (render 'user') %>");
+$('#category_users').html("<%= j (render 'category_users') %>");
+$('#category_form').html("<%= j (render 'category_form') %>");
+
+ $(".dropdown-selector-single").select2({
+ 		placeholder: "Select User",
+ 		theme: "bootstrap",
+ 		width: "100%"
+ });
+
+ $(".dropdown-selector-multiple").select2({
+ 		placeholder: "Select Document Category",
+ 		width: "auto !important",
+ 		theme: "bootstrap"
+ });
